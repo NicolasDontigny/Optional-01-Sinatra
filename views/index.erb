@@ -1,0 +1,18 @@
+<h1>Welcome to your Cookbook</h1>
+
+<% @recipes.each_with_index do |recipe, index| %>
+  <% box = recipe.done ? "[X]" : "[ ]" %>
+
+  <div class="flex-div">
+    <div class="inline-div trash">
+      <a href="/destroy/<%=index%>"><i class="far fa-trash-alt fa-2x"></i></a>
+    </div>
+    <div class="inline-div">
+      <h4><%= "#{index + 1}. #{box} #{recipe.name} - #{recipe.rating}" %></h4>
+      <h5><%= "\t#{recipe.description}" %></h5>
+    </div>
+  </div>
+<% end %>
+
+<a class="create" href="/new">Create a new recipe yourself</a>
+<a class="create" href="/new-ricardo">Add a new recipe from Ricardo</a>

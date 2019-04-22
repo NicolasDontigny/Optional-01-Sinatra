@@ -1,0 +1,14 @@
+<h1>Choose a new recipe from Ricardo</h1>
+
+<% @recipes.each_with_index do |recipe, index| %>
+  <div class="flex-div">
+    <div class="inline-div trash">
+      <a href="/new-ricardo/<%=@ingredient%>/<%=index%>"><i class="fas fa-plus fa-2x"></i></a>
+    </div>
+    <div class="inline-div">
+      <h4><%= "#{index + 1}. #{recipe[:name]} (#{recipe[:preptime]}) - #{recipe[:rating]}" %></h4>
+    </div>
+  </div>
+<% end %>
+
+<a class="create" href="/">Home</a>

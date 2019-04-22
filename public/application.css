@@ -1,0 +1,23 @@
+.container {
+  margin-top: 50px;
+}
+
+.flex-div {
+  display: flex;
+  align-items: center;
+}
+
+.inline-div {
+  display: inline-block;
+}
+
+.trash {
+  padding: 20px;
+}
+
+.create {
+  font-size: 150%;
+  color: maroon;
+  display: block;
+  margin: 15px 0;
+}
